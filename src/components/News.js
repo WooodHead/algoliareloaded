@@ -39,7 +39,7 @@ import Article from './Article';
  const News = ({ news, error }) => (
   <div className="News">
    {error && (
-      <p className="error">oops ! something went wrong..</p>
+      <p className="error">{`oops ! something went wrong..`}></p>
     )}
     <NewsHeader columns={COLUMNS} />
     {(news || []).map(article => (
