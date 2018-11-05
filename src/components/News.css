@@ -1,0 +1,17 @@
+
+   .News-Header > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+  }
+
+  .News {
+    margin: 20px 0;
+  }
+   .News-Header {
+    display: flex;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }

@@ -1,14 +1,64 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: rgb(255, 255, 255);
+  background: #ff5f03;
+  font: 400 14px CoreSans, Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+input {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+  border: 2px solid #000000;
+}
+
+ a {
+  color: rgb(0, 0, 0);
+}
+ a:hover {
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+}
+
+ ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ input {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+  border: 2px solid #000000;
+}
+
+ .button-inline {
+  border-width: 0;
+  background: transparent;
+  color: inherit;
+  text-align: inherit;
+  -webkit-font-smoothing: inherit;
+  padding: 0;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+ .button-active {
+  border-radius: 0;
+  border-bottom: 1px solid #38bb6c;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+ button:hover {
+  color: rgb(0, 0, 0);
 }
