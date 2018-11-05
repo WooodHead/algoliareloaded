@@ -17,7 +17,7 @@ input {
 }
  a:hover {
   text-decoration: underline;
-  color: rgb(255, 255, 255);
+  color: #ff5f03;
 }
 
  ul, li {

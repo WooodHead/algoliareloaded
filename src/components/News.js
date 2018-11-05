@@ -1,4 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
+import { doArchiveArticle } from "../actions/Archive";
+import { fetchNewsArticles } from "../selectors/Article";
 import "./News.css";
 import Article from "./Article";
 
@@ -34,10 +37,10 @@ import Article from "./Article";
   </div>
 );
 
- export default ({ News, onArchive }) => (
+ const News = ({ news, onArchive }) => (
   <div className="News">
     <NewsHeader columns={COLUMNS} />
-    {(News || []).map(article => (
+    {(news || []).map(article => (
       <Article
         key={article.objectID}
         article={article}
@@ -47,3 +50,11 @@ import Article from "./Article";
     ))}
   </div>
 );
+
+const mapStateToProps = state => ({
+  news: fetchNewsArticles(state),
+});
+ const mapDispatchToProps = dispatch => ({
+  onArchive: id => dispatch(doArchiveArticle(id)),
+});
+ export default connect(mapStateToProps, mapDispatchToProps)(News);
