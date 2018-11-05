@@ -18,7 +18,7 @@ const INITIAL_STATE = [
   ];
 
    const articleReducer = (state = INITIAL_STATE, action) => {
-    const { type, payload } = action;
+    const { type } = action;
     switch (type) {
       default:
         return state;

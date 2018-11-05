@@ -1,0 +1,1 @@
+export const ARTICLE_ARCHIVE = "article/article_archive";
