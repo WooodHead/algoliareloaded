@@ -1,4 +1,4 @@
-import { ARTICLE_ARCHIVE } from "../constants/actionTypes";
+import { ARTICLE_ARCHIVE } from '../constants/actionTypes';
 
 const INITIAL_STATE = [];
 

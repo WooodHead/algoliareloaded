@@ -3,6 +3,8 @@ const isNotArchived = archivedIds => article =>
   archivedIds.indexOf(article.objectID) === -1;
 
  const fetchNewsArticles = ({ articleState, archiveState }) =>
-  articleState.filter(isNotArchived(archiveState));
+  articleState.news.filter(isNotArchived(archiveState));
 
- export { fetchNewsArticles };
+  const getFetchError = ({ articleState }) => articleState.error;
+
+ export { fetchNewsArticles, getFetchError };

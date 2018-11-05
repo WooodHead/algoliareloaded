@@ -1,8 +1,8 @@
-import React from "react";
-import { connect } from "react-redux";
-import { fetchNewsArticles } from "../selectors/Article";
-import "./News.css";
-import Article from "./Article";
+import React from 'react';
+import { connect } from 'react-redux';
+import { fetchNewsArticles, getFetchError } from '../selectors/Article';
+import './News.css';
+import Article from './Article';
 
  const COLUMNS = {
   title: {
@@ -36,8 +36,11 @@ import Article from "./Article";
   </div>
 );
 
- const News = ({ news }) => (
+ const News = ({ news, error }) => (
   <div className="News">
+   {error && (
+      <p className="error">oops ! something went wrong..</p>
+    )}
     <NewsHeader columns={COLUMNS} />
     {(news || []).map(article => (
       <Article key={article.objectID} article={article} columns={COLUMNS} />
@@ -47,6 +50,7 @@ import Article from "./Article";
 
 const mapStateToProps = state => ({
   news: fetchNewsArticles(state),
+  error: getFetchError(state),
 });
 
  export default connect(mapStateToProps)(News);
