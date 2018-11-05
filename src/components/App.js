@@ -1,11 +1,14 @@
 import React from "react";
 import "./App.css";
 import News from "./News";
-import { ARTICLE_ARCHIVE } from "../constants/actionTypes";
-import store from "../store";
+import SearchNews from "./SearchNews";
+
 
 export default () => (
   <div className="app">
+  <div className="interactions">
+      <SearchNews />
+    </div>
     <News/>
   </div>
 );

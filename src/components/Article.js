@@ -1,7 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
+import { doArchiveArticle } from "../actions/Archive";
 import "./Article.css";
 import Button from "./Button";
- export default ({ article, columns, onArchive }) => {
+
+  const Article = ({ article, columns, onArchive }) => {
   const { title, url, author, num_comments, points, objectID } = article;
    return (
     <div className="Article">
@@ -17,3 +20,8 @@ import Button from "./Button";
     </div>
   );
 };
+
+const mapDispatchToProps = dispatch => ({
+  onArchive: id => dispatch(doArchiveArticle(id)),
+});
+ export default connect(null, mapDispatchToProps)(Article);
