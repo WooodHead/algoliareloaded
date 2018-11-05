@@ -6,7 +6,8 @@ import store from "./store";
 import registerServiceWorker from "./registerServiceWorker";
 
  ReactDOM.render(
-  <App News={store.getState()} onArchive={() => {}} />,
+  <App News={store.getState().articleState} onArchive={() => {}} />,
   document.getElementById("root"),
 );
+
 registerServiceWorker();
